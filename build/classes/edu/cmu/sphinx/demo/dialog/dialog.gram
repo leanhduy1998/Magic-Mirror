@@ -1,0 +1,23 @@
+#JSGF V1.0;
+
+grammar dialog;
+
+
+public <command> = <listen_command>;
+
+<listen_command> = <control_command> | <menu_command> | <display_command>;
+
+<control_command> = begin recognition|
+                    end recognition |
+                    stop recognition|
+                    do not listen;
+
+<display_command> = what can i say |
+                    search wolfram alpha |
+                    show tree |
+                    show circles |
+                    display tree |
+                    go back;
+
+<menu_command> = back to home|
+                 return home;
